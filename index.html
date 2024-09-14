@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Expense Tracker</h1>
+
+    <div class="input-section">
+        <label for="category-select">Category:</label>
+        <select id="category-select">
+            <option value="" placeholder="category"></option>
+            <option value="Food & Beverage">Food & Beverage</option>
+            <option value="Rent">Rent</option>
+            <option value="Transport">Transport</option>
+            <option value="Entertainment">Entertainment</option>
+        </select>
+        
+        <label for="amount-input">Amount:</label>
+        <input type="number" id="amount-input" placeholder="Amount">
+        
+        <label for="date-input">Date:</label>
+        <input type="date" id="date-input">
+        
+        <button id="add-btn">Add Expense</button>
+    </div>
+
+    <div class="input-section custom">
+        <label for="new-category-input">Add Custom Category:</label>
+        <input type="text" id="new-category-input" placeholder="New Category">
+        <button id="add-category-btn">Add Category</button>
+    </div>
+
+    <h2>Expenses</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="expense-table-body"></tbody>
+    </table>
+    
+    <p class="total-amount">Total Amount: ₹<span id="total-amount">0.00</span></p>
+
+    <div class="sidebar">
+        <div class="summary-section">
+            <h4>Category Total</h4>
+            <div class="summary-row">
+                <select id="category-total-select">
+                    <option value="">Select Category</option>
+                    <option value="Food & Beverage">Food & Beverage</option>
+                    <option value="Rent">Rent</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Entertainment">Entertainment</option>
+                </select>
+                <button id="category-total-btn">Calculate Total</button>
+            </div>
+            <p id="category-total-display"></p>
+        </div>
+
+        <div class="summary-section">
+            <h4>Daily Total</h4>
+            <div class="summary-row">
+                <input type="date" id="day-total-input">
+                <button id="day-total-btn">Calculate Total</button>
+            </div>
+            <p id="day-total-display"></p>
+        </div>
+
+        <div class="summary-section">
+            <h4>Monthly Total</h4>
+            <div class="summary-row">
+                <input type="month" id="month-total-input">
+                <button id="month-total-btn">Calculate Total</button>
+            </div>
+            <p id="month-total-display"></p>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
+
